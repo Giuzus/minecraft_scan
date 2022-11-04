@@ -38,7 +38,7 @@ servers_collection = database['servers']
 if __name__ == "__main__":
     
     while True:
-        possible_servers = possible_servers_collection.find(limit=100)
+        possible_servers = possible_servers_collection.find(limit=50)
         ips = [server['ip'] for server in possible_servers]
         if len(ips) > 0:
             print("---------------------------------")
